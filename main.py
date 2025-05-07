@@ -13,7 +13,7 @@ from middleware.time import TimingMiddleware
 
 app = FastAPI()
 
-
+init_limiter(app)
 
 async def authorize_user(request: Request):
     token = request.headers.get('authorization')
